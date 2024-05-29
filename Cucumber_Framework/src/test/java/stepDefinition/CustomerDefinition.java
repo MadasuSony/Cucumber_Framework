@@ -91,5 +91,24 @@ public class CustomerDefinition
 	public void close_application_browser() {
 	    FunctionLibrary.closeBrowser();
 	}
-
+	@When("wait for Supplier link with {string} and {string}")
+	public void wait_for_supplier_link_with_and(String LocatorType, String LocatorValue) {
+	    FunctionLibrary.waitForElement(LocatorType, LocatorValue, "10");
+	}
+	@When("click on Supplier link with {string} and {string}")
+	public void click_on_supplier_link_with_and(String LocatorType, String LocatorValue) {
+	    FunctionLibrary.clickAction(LocatorType, LocatorValue);
+	}
+	@When("vaidate Supplier table")
+	public void vaidate_supplier_table() throws Throwable {
+	    FunctionLibrary.supplierTable();
+	}
+	@When("wait for supplier number with {string} and {string}")
+	public void wait_for_supplier_number_with_and(String LocatorType, String LocatorValue) {
+	    FunctionLibrary.waitForElement(LocatorType, LocatorValue, "10");
+	}
+	@When("capture supplier number with {string} and {string}")
+	public void capture_supplier_number_with_and(String LocatorType, String LocatorValue) throws Throwable {
+	    FunctionLibrary.captureSup(LocatorType, LocatorValue);
+	}
 }
